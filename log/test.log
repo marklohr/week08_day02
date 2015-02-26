@@ -1,0 +1,21 @@
+  [1m[36m (135.0ms)[0m  [1mDROP DATABASE IF EXISTS `patients_test`[0m
+  [1m[35m (0.8ms)[0m  CREATE DATABASE `patients_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (294.1ms)[0m  [1mCREATE TABLE `doctors` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `first_name` varchar(255), `last_name` varchar(255), `gender_name` varchar(255), `specialty` varchar(255), `biography` text) ENGINE=InnoDB[0m
+  [1m[35m (212.3ms)[0m  CREATE TABLE `medications` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `patient_id` int(11), `name` varchar(255), `side_effects` varchar(255)) ENGINE=InnoDB
+  [1m[36m (122.1ms)[0m  [1mCREATE TABLE `nurses` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `gender` varchar(255), `nurseable_id` int(11), `nurseable_type` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (218.7ms)[0m  CREATE TABLE `patients` (`id` int(11) auto_increment PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `date_of_birth` date, `description` text, `gender` varchar(255), `blood_type` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `doctor_id` int(11)) ENGINE=InnoDB
+  [1m[36m (80.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (262.9ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (9.4ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (17.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20150127183229')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20150121195720')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20150123164957')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20150123165044')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20150123181707')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20150123181750')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20150123181954')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20150123184312')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20150123185055')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20150123185224')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20150126201853')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
