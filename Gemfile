@@ -57,6 +57,11 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
+  #makes tests easier on the fingers and eyes: https://github.  com/thoughtbot/shoulda
+  gem 'shoulda'
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2.0'
+
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
   gem 'launchy'
